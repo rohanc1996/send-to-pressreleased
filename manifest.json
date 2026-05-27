@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Send to PressReleased",
+  "version": "3.5",
+  "description": "Bypasses paywalls using PressReleased reader API.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://pressreleased.alwaysdata.net/"
+  ],
+  "action": {},
+  "background": {
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pressreleased-reader@yourdomain.com",
+      "strict_min_version": "120.0"
+    }
+  }
+}
