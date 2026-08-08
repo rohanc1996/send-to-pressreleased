@@ -1,0 +1,210 @@
+.pressreleased-reader {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 24px 16px;
+  background: #2e3440;
+  color: #d8dee9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, serif;
+  line-height: 1.6;
+  -webkit-overflow-scrolling: touch;
+  --reader-text-scale: 1;
+  --reader-heading: #eceff4;
+  --reader-muted: #9cafc2;
+  --reader-subtle: #4c566a;
+}
+
+.pressreleased-reader[data-theme="light"] {
+  background: #f8f9fa;
+  color: #242933;
+  --reader-heading: #1f2328;
+  --reader-muted: #4b5563;
+  --reader-subtle: #52606d;
+}
+
+.pressreleased-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.pressreleased-container.is-wide {
+  max-width: 860px;
+}
+
+.pressreleased-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.pressreleased-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pressreleased-button {
+  border: 0;
+  border-radius: 20px;
+  padding: 8px 14px;
+  color: #eceff4;
+  background: #3b4252;
+  font: 600 0.85rem sans-serif;
+  cursor: pointer;
+}
+
+.pressreleased-button:focus-visible {
+  outline: 3px solid #88c0d0;
+  outline-offset: 2px;
+}
+
+.pressreleased-close {
+  margin-left: auto;
+  color: #fff;
+  background: #bf616a;
+  border: 1px solid #d08770;
+}
+
+.pressreleased-meta {
+  margin-bottom: 8px;
+  color: var(--reader-subtle);
+  font: 600 calc(0.85rem * var(--reader-text-scale)) sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pressreleased-title {
+  margin: 0 0 15px;
+  color: var(--reader-heading);
+  font-size: calc(2.2rem * var(--reader-text-scale));
+  line-height: 1.25;
+}
+
+.pressreleased-byline {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #3b4252;
+  color: var(--reader-muted);
+  font: italic calc(0.95rem * var(--reader-text-scale)) sans-serif;
+}
+
+.pressreleased-excerpt {
+  margin-bottom: 25px;
+  color: var(--reader-muted);
+  font-size: calc(1.15rem * var(--reader-text-scale));
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.pressreleased-article p,
+.pressreleased-article li,
+.pressreleased-article blockquote,
+.pressreleased-article figcaption {
+  font-size: calc(1.15rem * var(--reader-text-scale));
+}
+
+.pressreleased-article p {
+  margin: 0 0 1.6rem;
+  word-wrap: break-word;
+}
+
+.pressreleased-article h2,
+.pressreleased-article h3 {
+  margin: 2.2rem 0 1rem;
+  color: var(--reader-heading);
+  font-size: calc(1.5rem * var(--reader-text-scale));
+  line-height: 1.3;
+}
+
+.pressreleased-article pre {
+  overflow-x: auto;
+  padding: 16px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  font: 0.9em/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  white-space: pre;
+}
+
+.pressreleased-article code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.pressreleased-article blockquote {
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+  border-left: 4px solid #88c0d0;
+  color: var(--reader-muted);
+}
+
+.pressreleased-article table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.pressreleased-article th,
+.pressreleased-article td {
+  padding: 8px 12px;
+  border: 1px solid var(--reader-subtle);
+  text-align: left;
+}
+
+.pressreleased-article a {
+  color: #88c0d0;
+  text-decoration: none;
+  border-bottom: 1px dashed #88c0d0;
+}
+
+.pressreleased-article img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 6px;
+  opacity: 0.8;
+}
+
+.pressreleased-loading {
+  padding: 24px;
+  color: #d8dee9;
+  text-align: center;
+  font: 1rem sans-serif;
+}
+
+@media (max-width: 600px) {
+  .pressreleased-reader {
+    padding: 12px;
+  }
+
+  .pressreleased-toolbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .pressreleased-settings {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pressreleased-button {
+    min-height: 40px;
+    padding: 8px 10px;
+  }
+
+  .pressreleased-close {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
