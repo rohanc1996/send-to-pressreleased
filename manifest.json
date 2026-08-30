@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Send to PressReleased",
-  "version": "3.6",
+  "version": "3.7",
   "description": "Bypasses paywalls using PressReleased reader API.",
   "permissions": [
     "activeTab",
